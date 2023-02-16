@@ -1,0 +1,179 @@
+@import url("https://fonts.cdnfonts.com/css/alarm-clock");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: rgb(208, 208, 208);
+  background: linear-gradient(
+    315deg,
+    rgba(208, 208, 208, 1) 0%,
+    rgba(217, 217, 217, 1) 100%
+  );
+}
+
+#stopwatch {
+  position: relative;
+}
+
+#left-btn {
+  background: #353535;
+  position: absolute;
+  left: 50px;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px 15px 0 0;
+  rotate: -30deg;
+}
+
+#left-btn:active {
+  background: #262626;
+}
+
+#left-btn:hover {
+  cursor: pointer;
+}
+
+#left-btn::after {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  content: "Reset";
+  color: rgb(235, 235, 13);
+  font-weight: 600;
+}
+
+#top-btn {
+  background: #353535;
+  position: absolute;
+  top: -20px;
+  left: 135px;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px 15px 0 0;
+}
+
+#top-btn:active {
+  background: #262626;
+}
+
+#top-btn:hover {
+  cursor: pointer;
+}
+
+#top-btn::after {
+  position: absolute;
+  top: 40px;
+  left: 8px;
+  content: "Stop";
+  color: #fff;
+  font-weight: 600;
+  color: rgb(235, 235, 13);
+}
+
+#right-btn {
+  background: #b81414;
+  position: absolute;
+  right: 50px;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px 15px 0 0;
+  rotate: 30deg;
+}
+
+#right-btn:active {
+  background: #9c0e0e;
+}
+
+#right-btn:hover {
+  cursor: pointer;
+}
+
+#right-btn::after {
+  position: absolute;
+  top: 40px;
+  right: 8px;
+  z-index: 5;
+  content: "Start";
+  color: rgb(235, 235, 13);
+  font-weight: 600;
+}
+
+#stopwatch-display {
+  background: #1c1c1c;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #000;
+  border-radius: 50%;
+  position: relative;
+  z-index: -1;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.55);
+}
+
+#stopwatch-display-numbers {
+  background: #b5bfc0;
+  color: #000;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: "alarm clock", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: rgb(235, 235, 13) 3px solid;
+  outline-offset: 15px;
+}
+
+#stopwatch-display-numbers::before {
+  content: "Stopwatch";
+  position: absolute;
+  top: -50px;
+  left: 58px;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-decoration: underline;
+  color: #fff;
+}
+
+#stopwatch-display-numbers::after {
+  content: "by João Marcos\a\aV1.1";
+  white-space: pre;
+  position: absolute;
+  top: 120px;
+  left: 55px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+#min {
+  color: rgb(235, 235, 13);
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 45px;
+  top: 182px;
+  font-size: 0.8rem;
+}
+
+#sec {
+  color: rgb(235, 235, 13);
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 100px;
+  top: 182px;
+  font-size: 0.8rem;
+}
+
+#mil {
+  color: rgb(235, 235, 13);
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 180px;
+  top: 182px;
+  font-size: 0.8rem;
+}
